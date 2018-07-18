@@ -1,0 +1,35 @@
+.weather-text {
+  text-align: center;
+}
+
+.weather-text div {
+  font-size: 2rem;
+  line-height: 1rem;
+}
+
+.weather-text span {
+  font-size: 0.8rem;
+}
+
+.weather .dropdown-menu {
+  width: 30rem;
+  text-align: left;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.weather-header {
+  margin: 1rem;
+}
+
+.weather-main {
+  margin: 1rem;
+  font-size: 4rem;
+}
+
+.weather-footer {
+  margin: 1rem;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}

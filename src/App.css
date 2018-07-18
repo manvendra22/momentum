@@ -1,0 +1,15 @@
+.corner {
+  margin: 1.2rem;
+}
+
+.corner-text {
+  font-size: 1.2rem;
+}
+
+.dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.dropdown-item {
+  color: white;
+}
