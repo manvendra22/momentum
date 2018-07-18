@@ -1,6 +1,8 @@
 import React from 'react';
 import './Weather.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export default () => (
   <div className="dropdown show weather corner">
     <div
@@ -11,7 +13,8 @@ export default () => (
       aria-expanded="false"
     >
       <div>
-        <i className="fas fa-sun" />
+        {/* <i className="fas fa-sun" /> */}
+        <FontAwesomeIcon icon="stroopwafel" />
         27
         <sup>o</sup>
       </div>
@@ -37,7 +40,8 @@ export default () => (
         <div className="weather-footer">
           <div className="weather-day">
             <div>Wed</div>
-            <i className="fas fa-sun" />
+            {/* <i className="fas fa-sun" /> */}
+            <FontAwesomeIcon icon="stroopwafel" />
             <span>
               27
               <sup>o</sup>
@@ -49,7 +53,8 @@ export default () => (
           </div>
           <div className="weather-day">
             <div>Wed</div>
-            <i className="fas fa-sun" />
+            {/* <i className="fas fa-sun" /> */}
+            <FontAwesomeIcon icon="stroopwafel" />
             <span>
               27
               <sup>o</sup>
@@ -61,7 +66,8 @@ export default () => (
           </div>
           <div className="weather-day">
             <div>Wed</div>
-            <i className="fas fa-sun" />
+            {/* <i className="fas fa-sun" /> */}
+            <FontAwesomeIcon icon="stroopwafel" />
             <span>
               27
               <sup>o</sup>
@@ -73,7 +79,8 @@ export default () => (
           </div>
           <div className="weather-day">
             <div>Wed</div>
-            <i className="fas fa-sun" />
+            {/* <i className="fas fa-sun" /> */}
+            <FontAwesomeIcon icon="stroopwafel" />
             <span>
               27
               <sup>o</sup>
@@ -85,7 +92,8 @@ export default () => (
           </div>
           <div className="weather-day">
             <div>Wed</div>
-            <i className="fas fa-sun" />
+            {/* <i className="fas fa-sun" /> */}
+            <FontAwesomeIcon icon="stroopwafel" />
             <span>
               27
               <sup>o</sup>

@@ -1,6 +1,8 @@
 import React from 'react';
 import './Setting.css';
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 export default () => (
   <div className="dropup show setting corner">
     <div
@@ -10,8 +12,8 @@ export default () => (
       aria-haspopup="true"
       aria-expanded="false"
     >
-      <i className="fas fa-cog" />
-      Tiwari
+      {/* <i className="fas fa-cog" /> */}
+      <FontAwesomeIcon icon="stroopwafel" />
     </div>
     <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <div className="setting-container">
