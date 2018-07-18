@@ -10,7 +10,8 @@ html {
 }
 
 body {
-  color: black;
+  color: white;
   font-size: 1rem;
   font-family: 'Roboto', sans-serif;
+  background-image: url('https://s3.amazonaws.com/123rf-chrome/images/14881853_xl.jpg');
 }
