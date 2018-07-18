@@ -2,6 +2,7 @@ import React from 'react';
 import './Weather.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCloud } from '@fortawesome/free-solid-svg-icons';
 
 export default () => (
   <div className="dropdown show weather corner">
@@ -14,7 +15,7 @@ export default () => (
     >
       <div>
         {/* <i className="fas fa-sun" /> */}
-        <FontAwesomeIcon icon="stroopwafel" />
+        <FontAwesomeIcon icon={faCloud} />
         27
         <sup>o</sup>
       </div>
@@ -41,7 +42,7 @@ export default () => (
           <div className="weather-day">
             <div>Wed</div>
             {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon="stroopwafel" />
+            <FontAwesomeIcon icon={faCloud} />
             <span>
               27
               <sup>o</sup>
@@ -54,7 +55,8 @@ export default () => (
           <div className="weather-day">
             <div>Wed</div>
             {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon="stroopwafel" />
+            <FontAwesomeIcon icon={faCloud} />
+
             <span>
               27
               <sup>o</sup>
@@ -67,7 +69,8 @@ export default () => (
           <div className="weather-day">
             <div>Wed</div>
             {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon="stroopwafel" />
+            <FontAwesomeIcon icon={faCloud} />
+
             <span>
               27
               <sup>o</sup>
@@ -80,7 +83,8 @@ export default () => (
           <div className="weather-day">
             <div>Wed</div>
             {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon="stroopwafel" />
+            <FontAwesomeIcon icon={faCloud} />
+
             <span>
               27
               <sup>o</sup>
@@ -93,7 +97,8 @@ export default () => (
           <div className="weather-day">
             <div>Wed</div>
             {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon="stroopwafel" />
+            <FontAwesomeIcon icon={faCloud} />
+
             <span>
               27
               <sup>o</sup>

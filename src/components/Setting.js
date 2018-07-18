@@ -2,6 +2,7 @@ import React from 'react';
 import './Setting.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 export default () => (
   <div className="dropup show setting corner">
@@ -13,7 +14,7 @@ export default () => (
       aria-expanded="false"
     >
       {/* <i className="fas fa-cog" /> */}
-      <FontAwesomeIcon icon="stroopwafel" />
+      <FontAwesomeIcon icon={faCog} />
     </div>
     <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <div className="setting-container">
