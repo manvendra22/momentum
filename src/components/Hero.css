@@ -1,0 +1,145 @@
+.container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.section {
+  text-align: center;
+}
+
+.quote {
+  text-align: center;
+  width: 500px;
+}
+
+.focus {
+  border: none;
+  border-bottom: 1px solid white;
+  width: 35rem;
+  height: 4rem;
+  background: transparent;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  cursor: text;
+  outline: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.time {
+  margin-top: 15rem;
+  font-size: 10rem;
+  font-weight: 700;
+  margin-bottom: -2.5rem;
+}
+
+.greeting {
+  font-size: 4rem;
+  font-weight: 550;
+  margin-bottom: 5rem;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: -1rem;
+}
+
+.quote {
+  font-size: 1.2rem;
+  margin: 1.2rem;
+}
+.section {
+  text-align: center;
+}
+
+.quote {
+  text-align: center;
+  width: 500px;
+}
+
+.focus {
+  border: none;
+  border-bottom: 1px solid white;
+  width: 35rem;
+  height: 4rem;
+  background: transparent;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  cursor: text;
+  outline: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.time {
+  margin-top: 15rem;
+  font-size: 10rem;
+  font-weight: 700;
+  margin-bottom: -2.5rem;
+}
+
+.greeting {
+  font-size: 4rem;
+  font-weight: 550;
+  margin-bottom: 5rem;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: -1rem;
+}
+
+.quote {
+  font-size: 1.2rem;
+  margin: 1.2rem;
+}
+
+.section {
+  text-align: center;
+}
+
+.quote {
+  text-align: center;
+  width: 500px;
+}
+
+.focus {
+  border: none;
+  border-bottom: 1px solid white;
+  width: 35rem;
+  height: 4rem;
+  background: transparent;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  cursor: text;
+  outline: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
+.time {
+  margin-top: 15rem;
+  font-size: 10rem;
+  font-weight: 700;
+  margin-bottom: -2.5rem;
+}
+
+.greeting {
+  font-size: 4rem;
+  font-weight: 550;
+  margin-bottom: 5rem;
+}
+
+.question {
+  font-size: 2rem;
+  margin-bottom: -1rem;
+}
+
+.quote {
+  font-size: 1.2rem;
+  margin: 1.2rem;
+}
