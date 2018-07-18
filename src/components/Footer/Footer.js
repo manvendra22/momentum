@@ -1,6 +1,6 @@
 import React from 'react';
-import Setting from './Setting';
-import Todo from './Todo';
+import Setting from './Setting/Setting';
+import Todo from './Todo/Todo';
 import './Footer.css';
 
 export default () => (

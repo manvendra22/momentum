@@ -1,6 +1,6 @@
 import React from 'react';
-import Link from './Link';
-import Weather from './Weather';
+import Link from './Link/Link';
+import Weather from './Weather/Weather';
 import './Header.css';
 
 export default () => (
