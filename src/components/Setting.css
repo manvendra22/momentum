@@ -1,0 +1,24 @@
+.setting .dropdown-menu {
+  width: 50rem;
+  text-align: left;
+  color: white;
+  border-radius: 0.2rem;
+}
+
+.setting-container {
+  margin: 2rem;
+  display: flex;
+  height: 30rem;
+  width: 40rem;
+}
+
+.setting-side {
+  width: 15rem;
+  border-right: 1px solid white;
+}
+
+.setting-main {
+  margin-left: 2rem;
+  width: 100%;
+  overflow-y: auto;
+}
