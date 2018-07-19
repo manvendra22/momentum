@@ -5,8 +5,8 @@ export default () => (
   <div className="container">
     <div className="section">
       <div className="time text">16:30</div>
-      <p className="greeting text">Good afternoon, Madar</p>
-      <p className="question text">What is your main focus for today?</p>
+      <div className="greeting text">Good afternoon, Madar</div>
+      <div className="question text">What is your main focus for today?</div>
       <input type="text" className="focus" />
     </div>
   </div>

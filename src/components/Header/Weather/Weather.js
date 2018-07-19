@@ -27,7 +27,7 @@ export default () => (
       <div>
         <div className="weather-header">
           <div className="city">Ahmedabad</div>
-          <div>Cloudy</div>
+          <div>Sunny</div>
         </div>
         <div className="weather-main">
           <FontAwesomeIcon className="icon" icon={faSun} />
@@ -52,7 +52,7 @@ export default () => (
           </div>
           <div className="weather-day">
             <div>Thu</div>
-            <FontAwesomeIcon className="icon" icon={faSun} />
+            <FontAwesomeIcon className="icon" icon={faUmbrella} />
 
             <span>
               27
@@ -65,7 +65,7 @@ export default () => (
           </div>
           <div className="weather-day">
             <div>Fri</div>
-            <FontAwesomeIcon className="icon" icon={faCloud} />
+            <FontAwesomeIcon className="icon" icon={faUmbrella} />
 
             <span>
               27
@@ -78,7 +78,7 @@ export default () => (
           </div>
           <div className="weather-day">
             <div>Sat</div>
-            <FontAwesomeIcon className="icon" icon={faUmbrella} />
+            <FontAwesomeIcon className="icon" icon={faSun} />
 
             <span>
               27
@@ -91,7 +91,7 @@ export default () => (
           </div>
           <div className="weather-day">
             <div>Sun</div>
-            <FontAwesomeIcon className="icon" icon={faUmbrella} />
+            <FontAwesomeIcon className="icon" icon={faCloud} />
 
             <span>
               27

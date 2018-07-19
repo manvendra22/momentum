@@ -1,14 +1,15 @@
 const initialState = {
   todoList: [],
   name: '',
-  focus: ''
+  focus: '',
+  insertFlag: false
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'ADD_NAME':
       return {};
-    case 'NAME':
+    case 'REMOVE_NAME':
       return {};
     case 'ADD_FOCUS':
       return {};
@@ -26,6 +27,11 @@ const reducer = (state = initialState, action) => {
           ...state.todoList.slice(0, action.i),
           ...state.todoList.slice(action.i + 1)
         ]
+      };
+    case 'UPDATE_INSERT_FLAG':
+      return {
+        ...state,
+        insertFlag: true
       };
     default:
       return state;

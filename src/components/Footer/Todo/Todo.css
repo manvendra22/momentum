@@ -15,7 +15,17 @@
 }
 
 .todo-main .icon {
-  margin-left: 10rem;
+  position: absolute;
+  right: 2rem;
+}
+
+.no-todo {
+  color: lightgray;
+  text-align: center;
+}
+
+.no-todo button {
+  margin-top: 1rem;
 }
 
 .todo-footer {
