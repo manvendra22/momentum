@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 const Hero = props => (
   <div className="section">
     <div className="time">16:30</div>
-    <div className="greeting">Good afternoon, Manven</div>
+    <div className="greeting">Good afternoon, {props.name}</div>
     {props.focus ? (
       <div className="today-focus">
         <div>TODAY</div>
@@ -42,12 +42,14 @@ const Hero = props => (
 
 const mapStateToProps = state => {
   return {
-    focus: state.focus
+    focus: state.focus,
+    name: state.name
   };
 };
 
 const mapDispatchToProps = dispatch => {
   return {
+    onNameAdded: name => dispatch({ type: 'ADD_NAME', name }),
     onFocusAdded: focus => dispatch({ type: 'ADD_FOCUS', focus }),
     onFocusRemoved: () => dispatch({ type: 'REMOVE_FOCUS' })
   };
