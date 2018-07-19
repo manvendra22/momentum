@@ -7,11 +7,15 @@
 }
 
 .todo-header {
+  color: lightgray;
 }
 
 .todo-main {
-  font-size: 1.2rem;
   margin-top: 1rem;
+}
+
+.todo-main .icon {
+  margin-left: 10rem;
 }
 
 .todo-footer {

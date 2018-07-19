@@ -15,9 +15,18 @@ const reducer = (state = initialState, action) => {
     case 'REMOVE_FOCUS':
       return {};
     case 'ADD_TODO':
-      return {};
+      return {
+        ...state,
+        todoList: [...state.todoList, action.todo]
+      };
     case 'REMOVE_TODO':
-      return {};
+      return {
+        ...state,
+        todoList: [
+          ...state.todoList.slice(0, action.i),
+          ...state.todoList.slice(action.i + 1)
+        ]
+      };
     default:
       return state;
   }
