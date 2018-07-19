@@ -17,12 +17,13 @@ export default () => (
     </div>
     <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <div>
-        <FontAwesomeIcon icon={faChrome} /> Chrome Tab
+        <FontAwesomeIcon icon={faChrome} />{' '}
+        <a href="chrome-search://local-ntp/local-ntp.html">Chrome Tab</a>
       </div>
       <div>
-        <FontAwesomeIcon icon={faAppStore} /> Apps
+        <FontAwesomeIcon icon={faAppStore} /> <a href="chrome://apps">Apps</a>
       </div>
-      <div>New Link</div>
+      <div className="new-link">New Link</div>
     </div>
   </div>
 );

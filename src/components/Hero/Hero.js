@@ -14,12 +14,14 @@ class Hero extends Component {
   render() {
     return (
       <div className="section">
-        <div className="time">{this.props.time}</div>
+        <div className="time">
+          {this.props.timeHours + ':' + this.props.timeMinutes}
+        </div>
         <div className="greeting">Good afternoon, {this.props.name}</div>
         {this.props.focus ? (
           <div className="today-focus">
             <div>TODAY</div>
-            <input type="checkbox" /> {this.this.props.focus}
+            <input type="checkbox" /> {this.props.focus}
             <FontAwesomeIcon
               className="icon"
               icon={faTimesCircle}
@@ -52,7 +54,8 @@ const mapStateToProps = state => {
   return {
     focus: state.focus,
     name: state.name,
-    time: state.time
+    timeHours: state.timeHours,
+    timeMinutes: state.timeMinutes
   };
 };
 

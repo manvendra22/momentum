@@ -5,3 +5,13 @@
   color: white;
   border-radius: 0.3rem;
 }
+
+.link a {
+  text-decoration: none;
+  color: grey;
+}
+
+.link .new-link {
+  color: grey;
+  margin-top: 0.6rem;
+}

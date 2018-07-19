@@ -6,7 +6,8 @@ const initialState = {
   stage: 1,
   focus: '',
   insertFlag: false,
-  time: new Date().getHours() + ':' + new Date().getMinutes()
+  timeHours: new Date().getHours(),
+  timeMinutes: new Date().getMinutes()
 };
 
 const reducer = (state = initialState, action) => {
@@ -65,7 +66,8 @@ const reducer = (state = initialState, action) => {
     case 'UPDATE_TIME':
       return {
         ...state,
-        time: new Date().getHours() + ':' + new Date().getMinutes()
+        timeHours: new Date().getHours(),
+        timeMinutes: new Date().getMinutes()
       };
     default:
       return state;
