@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.props.stage !== 1 ? (
+        {this.props.stage !== 4 ? (
           <Welcome />
         ) : (
           <div>

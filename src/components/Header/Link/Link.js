@@ -18,7 +18,7 @@ export default () => (
     <div className="dropdown-menu" aria-labelledby="dropdownMenuLink">
       <div>
         <FontAwesomeIcon icon={faChrome} />{' '}
-        <a href="chrome-search://local-ntp/local-ntp.html">Chrome Tab</a>
+        <a href="chrome://newtab">Chrome Tab</a>
       </div>
       <div>
         <FontAwesomeIcon icon={faAppStore} /> <a href="chrome://apps">Apps</a>

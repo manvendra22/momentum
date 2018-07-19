@@ -28,6 +28,21 @@
   color: white;
 }
 
+.focus3 {
+  border: none;
+  border-bottom: 1px solid white;
+  /* width: 35rem; */
+  height: 4rem;
+  background: transparent;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  cursor: text;
+  outline: 0;
+  text-align: center;
+  font-size: 2rem;
+  color: white;
+}
+
 .time {
   margin-top: 12rem;
   font-size: 12rem;

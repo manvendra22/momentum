@@ -7,6 +7,10 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { connect } from 'react-redux';
 
 class Hero extends Component {
+  state = {
+    name: this.props.name
+  };
+
   componentDidMount() {
     setInterval(() => this.props.onUpdateTime(), 1000);
   }
@@ -26,11 +30,32 @@ class Hero extends Component {
     return time;
   }
 
+  updateName = () => {
+    this.setState({
+      name: (
+        <input
+          type="text"
+          className="focus3"
+          value={this.props.name}
+          onKeyPress={e => {
+            if (e.key === 'Enter') {
+              this.props.onFocusAdded(e.target.value);
+              e.target.value = null;
+            }
+          }}
+        />
+      )
+    });
+  };
+
   render() {
     return (
       <div className="section">
         <div className="time">{this.calcTime()}</div>
-        <div className="greeting">Good afternoon, {this.props.name}</div>
+        <div className="greeting">
+          Good afternoon,{' '}
+          <span onDoubleClick={this.updateName}>{this.state.name}</span>
+        </div>
         {this.props.focus ? (
           <div className="today-focus">
             <div>TODAY</div>
