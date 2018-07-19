@@ -1,21 +1,21 @@
 .todo .dropdown-menu {
   width: 23rem;
+  padding: 1rem;
   text-align: left;
   color: white;
   border-radius: 0.2rem;
 }
 
 .todo-header {
-  margin: 1rem;
 }
 
 .todo-main {
-  margin: 1rem;
   font-size: 1.2rem;
+  margin-top: 1rem;
 }
 
 .todo-footer {
-  margin: 1rem;
+  margin-top: 1rem;
 }
 
 .focus2 {

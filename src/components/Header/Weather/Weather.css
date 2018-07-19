@@ -1,35 +1,45 @@
 .weather-text {
   text-align: center;
+  font-size: 0.7rem;
 }
 
 .weather-text div {
-  font-size: 2rem;
+  font-size: 1.6rem;
   line-height: 1rem;
-}
-
-.weather-text span {
-  font-size: 0.8rem;
 }
 
 .weather .dropdown-menu {
   width: 30rem;
+  padding: 1rem;
   text-align: left;
   color: white;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
 }
 
-.weather-header {
-  margin: 1rem;
+.weather-header .city {
+  font-size: 1.4rem;
 }
 
 .weather-main {
-  margin: 1rem;
   font-size: 4rem;
 }
 
 .weather-footer {
-  margin: 1rem;
   display: flex;
   justify-content: space-around;
   text-align: center;
+}
+
+.weather-day {
+  padding: 0.5rem;
+  font-size: 0.8rem;
+}
+
+hr {
+  margin: 0.4rem;
+  background: gray;
+}
+
+.icon {
+  margin-right: 0.2rem;
 }

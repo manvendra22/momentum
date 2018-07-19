@@ -14,8 +14,7 @@ export default () => (
       aria-expanded="false"
     >
       <div>
-        {/* <i className="fas fa-sun" /> */}
-        <FontAwesomeIcon icon={faCloud} />
+        <FontAwesomeIcon className="icon" icon={faSun} />
         27
         <sup>o</sup>
       </div>
@@ -27,11 +26,11 @@ export default () => (
     >
       <div>
         <div className="weather-header">
-          <div>Ahmedabad</div>
+          <div className="city">Ahmedabad</div>
           <div>Cloudy</div>
         </div>
         <div className="weather-main">
-          <i className="fas fa-sun" />
+          <FontAwesomeIcon className="icon" icon={faSun} />
           <span>
             27
             <sup>o</sup>
@@ -41,8 +40,7 @@ export default () => (
         <div className="weather-footer">
           <div className="weather-day">
             <div>Wed</div>
-            {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon={faCloud} />
+            <FontAwesomeIcon className="icon" icon={faCloud} />
             <span>
               27
               <sup>o</sup>
@@ -53,9 +51,8 @@ export default () => (
             </span>
           </div>
           <div className="weather-day">
-            <div>Wed</div>
-            {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon={faSun} />
+            <div>Thu</div>
+            <FontAwesomeIcon className="icon" icon={faSun} />
 
             <span>
               27
@@ -67,9 +64,8 @@ export default () => (
             </span>
           </div>
           <div className="weather-day">
-            <div>Wed</div>
-            {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon={faCloud} />
+            <div>Fri</div>
+            <FontAwesomeIcon className="icon" icon={faCloud} />
 
             <span>
               27
@@ -81,9 +77,8 @@ export default () => (
             </span>
           </div>
           <div className="weather-day">
-            <div>Wed</div>
-            {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon={faUmbrella} />
+            <div>Sat</div>
+            <FontAwesomeIcon className="icon" icon={faUmbrella} />
 
             <span>
               27
@@ -95,9 +90,8 @@ export default () => (
             </span>
           </div>
           <div className="weather-day">
-            <div>Wed</div>
-            {/* <i className="fas fa-sun" /> */}
-            <FontAwesomeIcon icon={faUmbrella} />
+            <div>Sun</div>
+            <FontAwesomeIcon className="icon" icon={faUmbrella} />
 
             <span>
               27

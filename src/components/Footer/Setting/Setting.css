@@ -1,12 +1,13 @@
 .setting .dropdown-menu {
   width: 50rem;
+  padding: 1rem;
   text-align: left;
   color: white;
   border-radius: 0.2rem;
 }
 
 .setting-container {
-  margin: 2rem;
+  padding: 2rem;
   display: flex;
   height: 30rem;
   width: 40rem;
@@ -18,7 +19,7 @@
 }
 
 .setting-main {
-  margin-left: 2rem;
+  padding-left: 2rem;
   width: 100%;
   overflow-y: auto;
 }
