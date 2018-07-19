@@ -5,7 +5,8 @@ const initialState = {
   password: '',
   stage: 1,
   focus: '',
-  insertFlag: false
+  insertFlag: false,
+  time: new Date().getHours() + ':' + new Date().getMinutes()
 };
 
 const reducer = (state = initialState, action) => {
@@ -60,6 +61,11 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         insertFlag: true
+      };
+    case 'UPDATE_TIME':
+      return {
+        ...state,
+        time: new Date().getHours() + ':' + new Date().getMinutes()
       };
     default:
       return state;

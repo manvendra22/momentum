@@ -7,28 +7,14 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 import { connect } from 'react-redux';
 
 class Hero extends Component {
-  state = {
-    time: new Date().getHours() + ':' + new Date().getMinutes()
-  };
-
   componentDidMount() {
-    this.timerID = setInterval(() => this.tick(), 1000);
-  }
-
-  componentWillUnmount() {
-    clearInterval(this.timerID);
-  }
-
-  tick() {
-    this.setState({
-      time: new Date().getHours() + ':' + new Date().getMinutes()
-    });
+    setInterval(() => this.props.onUpdateTime(), 1000);
   }
 
   render() {
     return (
       <div className="section">
-        <div className="time">{this.state.time}</div>
+        <div className="time">{this.props.time}</div>
         <div className="greeting">Good afternoon, {this.props.name}</div>
         {this.props.focus ? (
           <div className="today-focus">
@@ -65,7 +51,8 @@ class Hero extends Component {
 const mapStateToProps = state => {
   return {
     focus: state.focus,
-    name: state.name
+    name: state.name,
+    time: state.time
   };
 };
 
@@ -73,7 +60,8 @@ const mapDispatchToProps = dispatch => {
   return {
     onNameAdded: name => dispatch({ type: 'ADD_NAME', name }),
     onFocusAdded: focus => dispatch({ type: 'ADD_FOCUS', focus }),
-    onFocusRemoved: () => dispatch({ type: 'REMOVE_FOCUS' })
+    onFocusRemoved: () => dispatch({ type: 'REMOVE_FOCUS' }),
+    onUpdateTime: () => dispatch({ type: 'UPDATE_TIME' })
   };
 };
 

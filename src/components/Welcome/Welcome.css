@@ -21,6 +21,12 @@
   margin-bottom: 0rem;
 }
 
+.welcome .skip {
+  font-size: 2rem;
+  font-weight: 500;
+  margin-top: 10rem;
+}
+
 .welcome .focus {
   border: none;
   border-bottom: 1px solid white;

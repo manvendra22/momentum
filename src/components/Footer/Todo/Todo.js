@@ -60,9 +60,9 @@ const Todo = props => (
               {props.insertFlag ? null : (
                 <button
                   type="button"
-                  className="btn btn-secondary new-todo"
+                  className="btn btn-secondary"
                   onClick={() => {
-                    props.updateInsertFlag();
+                    props.onUpdateInsertFlag();
                   }}
                 >
                   New Todo
@@ -102,7 +102,7 @@ const mapDispatchToProps = dispatch => {
   return {
     onTodoAdded: todo => dispatch({ type: 'ADD_TODO', todo }),
     onTodoRemoved: i => dispatch({ type: 'REMOVE_TODO', i }),
-    updateInsertFlag: () => dispatch({ type: 'UPDATE_INSERT_FLAG' })
+    onUpdateInsertFlag: () => dispatch({ type: 'UPDATE_INSERT_FLAG' })
   };
 };
 

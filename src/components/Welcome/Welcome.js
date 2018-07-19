@@ -38,16 +38,19 @@ const Welcome = props => (
             }
           }}
         />
-        Or would you rather stay logged out?
-        <button
-          type="button"
-          className="btn btn-secondary new-todo"
-          onClick={() => {
-            props.onSkipSignup();
-          }}
-        >
-          Skip
-        </button>
+        <div className="skip">
+          Or would you rather stay logged out?
+          <br />
+          <button
+            type="button"
+            className="btn btn-secondary btn-lg"
+            onClick={() => {
+              props.onSkipSignup();
+            }}
+          >
+            Skip
+          </button>
+        </div>
       </div>
     ) : null}
 
