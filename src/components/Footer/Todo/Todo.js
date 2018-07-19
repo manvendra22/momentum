@@ -6,12 +6,12 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 
 import { connect } from 'react-redux';
 
-// import $ from 'jquery';
+import $ from 'jquery';
 
 // $('document').ready(function() {
 //   $('.dropdown-menu').on('click', function(e) {
-//     console.log('Hello');
-//     if ($(this).hasClass('dropdown-menu-form')) {
+//     console.log('jQuery', e.target.className);
+//     if (!$(this).hasClass('new-todo')) {
 //       e.stopPropagation();
 //     }
 //   });
@@ -30,7 +30,8 @@ const Todo = props => (
     </div>
     <div
       className="dropdown-menu dropdown-menu-right dropdown-menu-form"
-      // onCick={e => {
+      // onClick={e => {
+      //   console.log('React', e);
       //   e.stopPropagation();
       // }}
       aria-labelledby="dropdownMenuLink"
@@ -59,7 +60,7 @@ const Todo = props => (
               {props.insertFlag ? null : (
                 <button
                   type="button"
-                  className="btn btn-secondary"
+                  className="btn btn-secondary new-todo"
                   onClick={() => {
                     props.updateInsertFlag();
                   }}
