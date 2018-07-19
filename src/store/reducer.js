@@ -12,9 +12,15 @@ const reducer = (state = initialState, action) => {
     case 'REMOVE_NAME':
       return {};
     case 'ADD_FOCUS':
-      return {};
+      return {
+        ...state,
+        focus: action.focus
+      };
     case 'REMOVE_FOCUS':
-      return {};
+      return {
+        ...state,
+        focus: ''
+      };
     case 'ADD_TODO':
       return {
         ...state,
