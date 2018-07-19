@@ -2,7 +2,7 @@
   width: 50rem;
   padding: 1rem;
   text-align: left;
-  color: white;
+  color: lightgray;
   border-radius: 0.2rem;
 }
 
@@ -12,6 +12,7 @@
   display: flex;
   height: 30rem;
   width: 48rem;
+  font-size: 1.1rem;
 }
 
 .setting-side {
@@ -27,14 +28,49 @@
 
 .side-heading {
   padding-bottom: 0.6rem;
+  cursor: pointer;
 }
 
 .side-content {
-  padding: 0.4rem;
+  padding: 0.5rem;
   border-bottom: 1px solid grey;
+  cursor: pointer;
 }
 
 .side-toggle {
   position: relative;
   float: right;
+}
+
+.side-toggle.small-heading {
+  font-size: 1rem;
+  color: white;
+}
+
+.large-height {
+  height: 4rem;
+}
+
+.small-heading {
+  font-size: 1rem;
+  color: grey;
+}
+
+.main-heading {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+}
+
+.heading {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: white;
+}
+
+.tip {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-bottom: 0px;
 }

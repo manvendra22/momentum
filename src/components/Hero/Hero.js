@@ -11,12 +11,25 @@ class Hero extends Component {
     setInterval(() => this.props.onUpdateTime(), 1000);
   }
 
+  calcTime() {
+    let hours = this.props.timeHours.toString();
+    let minutes = this.props.timeMinutes.toString();
+    let time = `${hours}:${minutes}`;
+
+    if (hours.length === 1 && minutes.length === 1) {
+      time = `0${hours}:0${minutes}`;
+    } else if (hours.length === 1) {
+      time = `0${hours}:${minutes}`;
+    } else if (minutes.length === 1) {
+      time = `${hours}:0${minutes}`;
+    }
+    return time;
+  }
+
   render() {
     return (
       <div className="section">
-        <div className="time">
-          {this.props.timeHours + ':' + this.props.timeMinutes}
-        </div>
+        <div className="time">{this.calcTime()}</div>
         <div className="greeting">Good afternoon, {this.props.name}</div>
         {this.props.focus ? (
           <div className="today-focus">

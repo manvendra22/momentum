@@ -10,7 +10,6 @@ const Todo = props => (
   <div className="dropup show todo corner" auto-close="disabled">
     <div
       className="corner-text"
-      id="dropdownMenuLink"
       data-toggle="dropdown"
       aria-haspopup="true"
       aria-expanded="false"
