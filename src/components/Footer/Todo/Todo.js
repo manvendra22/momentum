@@ -6,17 +6,6 @@ import { faTimesCircle } from '@fortawesome/free-regular-svg-icons';
 
 import { connect } from 'react-redux';
 
-// import $ from 'jquery';
-
-// $('document').ready(function() {
-//   $('.dropdown-menu').on('click', function(e) {
-//     if ($(this).hasClass('dropdown-menu-form')) {
-//       console.log('jQuery', e);
-//       e.stopPropagation();
-//     }
-//   });
-// });
-
 const Todo = props => (
   <div className="dropup show todo corner" auto-close="disabled">
     <div
@@ -29,7 +18,7 @@ const Todo = props => (
       <span>Todo</span>
     </div>
     <div
-      className="dropdown-menu dropdown-menu-right dropdown-menu-form"
+      className="dropdown-menu dropdown-menu-right"
       aria-labelledby="dropdownMenuLink"
     >
       <div>
