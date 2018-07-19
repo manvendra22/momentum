@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.props.firstFlag ? (
+        {this.props.stage !== 4 ? (
           <Welcome />
         ) : (
           <div>
@@ -28,7 +28,7 @@ class App extends Component {
 
 const mapStateToProps = state => {
   return {
-    firstFlag: state.firstFlag
+    stage: state.stage
   };
 };
 

@@ -1,9 +1,11 @@
 const initialState = {
   todoList: [],
   name: '',
+  email: '',
+  password: '',
+  stage: 1,
   focus: '',
-  insertFlag: false,
-  firstFlag: true
+  insertFlag: false
 };
 
 const reducer = (state = initialState, action) => {
@@ -12,7 +14,24 @@ const reducer = (state = initialState, action) => {
       return {
         ...state,
         name: action.name,
-        firstFlag: false
+        stage: 2
+      };
+    case 'ADD_EMAIL':
+      return {
+        ...state,
+        email: action.email,
+        stage: 3
+      };
+    case 'SKIP_SIGNUP':
+      return {
+        ...state,
+        stage: 4
+      };
+    case 'ADD_PASSWORD':
+      return {
+        ...state,
+        password: action.password,
+        stage: 4
       };
     case 'ADD_FOCUS':
       return {
