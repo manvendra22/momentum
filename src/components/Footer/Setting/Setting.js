@@ -6,6 +6,7 @@ import Toggle from 'react-toggle';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCog } from '@fortawesome/free-solid-svg-icons';
+import { faMonero } from '@fortawesome/free-brands-svg-icons';
 
 import {
   Button,
@@ -90,9 +91,30 @@ class Setting extends React.Component {
               >
                 Balance
               </div>
-              <div className="side-heading disable-setting">Help</div>
-              <div className="side-heading disable-setting">What's New</div>
-              <div className="side-heading disable-setting">About</div>
+              <div
+                className="side-heading disable-setting"
+                onClick={() => {
+                  this.setState({ settingLevel: 7 });
+                }}
+              >
+                Help
+              </div>
+              <div
+                className="side-heading disable-setting"
+                onClick={() => {
+                  this.setState({ settingLevel: 8 });
+                }}
+              >
+                What's New
+              </div>
+              <div
+                className="side-heading disable-setting"
+                onClick={() => {
+                  this.setState({ settingLevel: 9 });
+                }}
+              >
+                About
+              </div>
               <div className="side-heading disable-setting">
                 Upgrade to Plus
               </div>
@@ -455,6 +477,54 @@ class Setting extends React.Component {
                       both and overlook neither.
                       <div>-Alan Cohen</div>
                     </div>
+                  </div>
+                </div>
+              ) : null}
+              {this.state.settingLevel === 7 ? (
+                <div>
+                  <div className="side-content">
+                    <div className="main-heading">Help</div>
+                  </div>
+                  <div className="side-content heading tip">TIPS</div>
+                  <div className="side-content tip">
+                    <div className="small-heading">
+                      To change your name, toggle the clock between 12 and 24
+                      hour, or change your location, double click on the setting
+                      you want to change.
+                    </div>
+                  </div>
+                  <div className="side-content">
+                    <div className="small-heading">
+                      Press TAB to focus Momentum when opening a new tabo be
+                      able to use hotkeys. You may need to press tab more than
+                      once.
+                      <div>-Alan Cohen</div>
+                    </div>
+                  </div>
+                  <Button color="secondary" size="lg">
+                    Check out our Help Center
+                  </Button>
+                </div>
+              ) : null}
+              {this.state.settingLevel === 8 ? (
+                <div>
+                  <div className="side-content">
+                    <div className="main-heading">What's New</div>
+                  </div>
+                  <div className="small-heading">
+                    Updates from the Momentum Team
+                  </div>
+                </div>
+              ) : null}
+              {this.state.settingLevel === 9 ? (
+                <div>
+                  <FontAwesomeIcon className="icon" icon={faMonero} />
+                  <div className="main-heading">Momentum</div>
+                  <div className="small-heading">
+                    Thank you for your support!
+                  </div>
+                  <div className="side-content">
+                    Feedback | Website | Blog | Instagram | Facebook | Twitter
                   </div>
                 </div>
               ) : null}

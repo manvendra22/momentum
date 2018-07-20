@@ -28,7 +28,21 @@ class Hero extends Component {
     } else if (minutes.length === 1) {
       time = `${hours}:0${minutes}`;
     }
+
     return time;
+  };
+
+  getGreeting = () => {
+    let hours = this.props.timeHours.toString();
+    let greeting = 'morning';
+
+    if (hours >= 16) {
+      greeting = 'evening';
+    } else if (hours >= 12) {
+      greeting = 'noon';
+    }
+
+    return greeting;
   };
 
   render() {
@@ -36,7 +50,7 @@ class Hero extends Component {
       <div className="section">
         <div className="time">{this.calcTime()}</div>
         <div className="greeting">
-          Good afternoon,{' '}
+          Good {this.getGreeting()}{' '}
           <span
             onDoubleClick={() => {
               this.setState({

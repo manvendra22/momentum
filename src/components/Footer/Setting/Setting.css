@@ -86,3 +86,8 @@
   display: flex;
   justify-content: space-evenly;
 }
+
+.setting-main .icon {
+  margin: 5rem 12rem;
+  font-size: 7rem;
+}
