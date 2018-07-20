@@ -90,11 +90,15 @@ class Setting extends React.Component {
               >
                 Balance
               </div>
-              <div className="side-heading">Help</div>
-              <div className="side-heading">What's New</div>
-              <div className="side-heading">About</div>
-              <div className="side-heading">Upgrade to Plus</div>
-              <div className="side-heading">Log In</div>
+              <div className="side-heading disable-setting">Help</div>
+              <div className="side-heading disable-setting">What's New</div>
+              <div className="side-heading disable-setting">About</div>
+              <div className="side-heading disable-setting">
+                Upgrade to Plus
+              </div>
+              <Button color="secondary" onClick={this.props.onUpdatedStage}>
+                Log in
+              </Button>
             </div>
             <div className="setting-main">
               {this.state.settingLevel === 1 ? (
@@ -327,13 +331,19 @@ class Setting extends React.Component {
                   <div className="side-content">
                     Show Links
                     <span className="side-toggle">
-                      <Toggle />
+                      <Toggle
+                        defaultChecked={this.props.showLinks}
+                        onChange={this.props.onUpdatedShowLinks}
+                      />
                     </span>
                   </div>
                   <div className="side-content">
                     Show Bookmarks Bar
                     <span className="side-toggle">
-                      <Toggle />
+                      <Toggle
+                        defaultChecked={this.props.showBookmarks}
+                        onChange={this.props.onUpdatedShowBookmarks}
+                      />
                     </span>
                   </div>
                   <div className="side-content">
@@ -404,6 +414,50 @@ class Setting extends React.Component {
                   </div>
                 </div>
               ) : null}
+              {this.state.settingLevel === 6 ? (
+                <div>
+                  <div className="side-content">
+                    <div className="main-heading">Balance</div>
+                    <div className="small-heading">
+                      Balance your day with periods of uptime and downtime
+                    </div>
+                  </div>
+                  <div className="side-content">
+                    Enable Balance Mode
+                    <span className="side-toggle">
+                      <Toggle />
+                    </span>
+                    <div className="small-heading">
+                      Hide productivity features during downtime
+                    </div>
+                  </div>
+                  <div className="side-content heading">UPTIME SCHEDULE</div>
+                  <div className="side-content header">
+                    <div className="small-heading">
+                      Times when productivity features are active
+                    </div>
+                  </div>
+                  <div className="side-content">
+                    Hours of the day
+                    <span className="side-toggle small-heading">
+                      8:30-16:30 | 9:00-17:00 | 9.30-17.30 | Custom
+                    </span>
+                  </div>
+                  <div className="side-content">
+                    Day of the week
+                    <span className="side-toggle small-heading">
+                      Weekdays | Every day | Custom
+                    </span>
+                  </div>
+                  <div className="side-content tip">
+                    <div className="small-heading">
+                      There is virtue in work and there is virtue in rest. Use
+                      both and overlook neither.
+                      <div>-Alan Cohen</div>
+                    </div>
+                  </div>
+                </div>
+              ) : null}
             </div>
           </div>
         </DropdownMenu>
@@ -420,7 +474,8 @@ const mapStateToProps = state => {
     showWeather: state.showWeather,
     showFocus: state.showFocus,
     showQuote: state.showQuote,
-    showTodo: state.showTodo
+    showTodo: state.showTodo,
+    stage: state.stage
   };
 };
 
@@ -432,7 +487,8 @@ const mapDispatchToProps = dispatch => {
     onUpdatedShowWeather: () => dispatch({ type: 'UPDATE_SHOW_WEATHER' }),
     onUpdatedShowFocus: () => dispatch({ type: 'UPDATE_SHOW_FOCUS' }),
     onUpdatedShowQuote: () => dispatch({ type: 'UPDATE_SHOW_QUOTE' }),
-    onUpdatedShowTodo: () => dispatch({ type: 'UPDATE_SHOW_TODO' })
+    onUpdatedShowTodo: () => dispatch({ type: 'UPDATE_SHOW_TODO' }),
+    onUpdatedStage: () => dispatch({ type: 'UPDATE_STAGE' })
   };
 };
 

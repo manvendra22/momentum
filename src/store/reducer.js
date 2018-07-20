@@ -111,7 +111,11 @@ const reducer = (state = initialState, action) => {
         ...state,
         showTodo: !state.showTodo
       };
-
+    case 'UPDATE_STAGE':
+      return {
+        ...state,
+        stage: 1
+      };
     default:
       return state;
   }
