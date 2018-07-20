@@ -9,7 +9,7 @@ import { connect } from 'react-redux';
 class Hero extends Component {
   state = {
     name: this.props.name,
-    name_value: this.props.name
+    flag: false
   };
 
   componentDidMount() {
@@ -31,41 +31,47 @@ class Hero extends Component {
     return time;
   };
 
-  updateName = () => {
-    this.setState({
-      name: (
-        <input
-          type="text"
-          className="input-name"
-          value={this.state.name_value}
-          onChange={e => {
-            this.setState({
-              name_value: e.target.value
-            });
-          }}
-          onKeyPress={e => {
-            if (e.key === 'Enter') {
-              this.props.onFocusAdded(e.target.value);
-              e.target.value = null;
-            }
-          }}
-        />
-      )
-    });
-  };
-
   render() {
     return (
       <div className="section">
         <div className="time">{this.calcTime()}</div>
         <div className="greeting">
           Good afternoon,{' '}
-          <span onDoubleClick={this.updateName}>{this.state.name}</span>
+          <span
+            onDoubleClick={() => {
+              this.setState({
+                flag: true
+              });
+            }}
+          >
+            {this.state.flag ? (
+              <input
+                type="text"
+                className="input-name"
+                value={this.state.name}
+                onChange={e => {
+                  this.setState({
+                    name: e.target.value
+                  });
+                }}
+                onKeyPress={e => {
+                  if (e.key === 'Enter') {
+                    this.setState({
+                      flag: false
+                    });
+                  }
+                }}
+              />
+            ) : (
+              this.state.name
+            )}
+          </span>
         </div>
         {this.props.focus ? (
           <div className="today-focus">
             <div>TODAY</div>
-            <input type="checkbox" /> {this.props.focus}
+            <input type="checkbox" className="strikethrough" />
+            <label>{this.props.focus}</label>
             <FontAwesomeIcon
               className="icon"
               icon={faTimesCircle}

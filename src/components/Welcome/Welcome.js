@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMonero } from '@fortawesome/free-brands-svg-icons';
 
+import { Button } from 'reactstrap';
+
 const Welcome = props => (
   <div className="welcome">
     <FontAwesomeIcon className="icon" icon={faMonero} />
@@ -41,15 +43,15 @@ const Welcome = props => (
         <div className="skip">
           Or would you rather stay logged out?
           <br />
-          <button
-            type="button"
-            className="btn btn-secondary btn-lg"
+          <Button
+            color="secondary"
+            size="lg"
             onClick={() => {
               props.onSkipSignup();
             }}
           >
             Skip
-          </button>
+          </Button>
         </div>
       </div>
     ) : null}

@@ -1,4 +1,4 @@
-.link .dropdown-menu {
+.link-menu {
   width: 15rem;
   padding: 1rem;
   text-align: left;
@@ -6,12 +6,16 @@
   border-radius: 0.3rem;
 }
 
-.link a {
+.link-corner {
+  height: 3rem;
+}
+
+.link-menu a {
   text-decoration: none;
   color: grey;
 }
 
-.link .new-link {
+.link-menu .new-link {
   color: grey;
   margin-top: 0.6rem;
 }
