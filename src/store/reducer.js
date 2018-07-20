@@ -1,13 +1,20 @@
 const initialState = {
   todoList: [],
-  name: 'Anil',
+  name: 'Magar Sakhija',
   email: '',
   password: '',
   stage: 1,
   focus: '',
   insertFlag: false,
   timeHours: new Date().getHours(),
-  timeMinutes: new Date().getMinutes()
+  timeMinutes: new Date().getMinutes(),
+  showLinks: true,
+  showBookmarks: false,
+  showSearch: false,
+  showWeather: true,
+  showFocus: true,
+  showQuote: true,
+  showTodo: true
 };
 
 const reducer = (state = initialState, action) => {
@@ -69,6 +76,42 @@ const reducer = (state = initialState, action) => {
         timeHours: new Date().getHours(),
         timeMinutes: new Date().getMinutes()
       };
+    case 'UPDATE_SHOW_LINKS':
+      return {
+        ...state,
+        showLinks: !state.showLinks
+      };
+    case 'UPDATE_SHOW_BOOKMARKS':
+      return {
+        ...state,
+        showBookmarks: !state.showBookmarks
+      };
+    case 'UPDATE_SHOW_SEARCH':
+      return {
+        ...state,
+        showSearch: !state.showSearch
+      };
+    case 'UPDATE_SHOW_WEATHER':
+      return {
+        ...state,
+        showWeather: !state.showWeather
+      };
+    case 'UPDATE_SHOW_FOCUS':
+      return {
+        ...state,
+        showFocus: !state.showFocus
+      };
+    case 'UPDATE_SHOW_QUOTE':
+      return {
+        ...state,
+        showQuote: !state.showQuote
+      };
+    case 'UPDATE_SHOW_TODO':
+      return {
+        ...state,
+        showTodo: !state.showTodo
+      };
+
     default:
       return state;
   }

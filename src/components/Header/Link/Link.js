@@ -6,7 +6,9 @@ import { faChrome, faAppStore } from '@fortawesome/free-brands-svg-icons';
 
 import { ButtonDropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
 
-export default class Link extends React.Component {
+import { connect } from 'react-redux';
+
+class Link extends React.Component {
   state = {
     dropdownOpen: false
   };
@@ -18,7 +20,7 @@ export default class Link extends React.Component {
   };
 
   render() {
-    return (
+    return !this.props.showLinks ? null : (
       <ButtonDropdown
         className="corner link-corner"
         isOpen={this.state.dropdownOpen}
@@ -40,3 +42,14 @@ export default class Link extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    showLinks: state.showLinks
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(Link);

@@ -67,7 +67,7 @@ class Hero extends Component {
             )}
           </span>
         </div>
-        {this.props.focus ? (
+        {!this.props.showFocus ? null : this.props.focus ? (
           <div className="today-focus">
             <div>TODAY</div>
             <input type="checkbox" className="strikethrough" />
@@ -105,7 +105,8 @@ const mapStateToProps = state => {
     focus: state.focus,
     name: state.name,
     timeHours: state.timeHours,
-    timeMinutes: state.timeMinutes
+    timeMinutes: state.timeMinutes,
+    showFocus: state.showFocus
   };
 };
 

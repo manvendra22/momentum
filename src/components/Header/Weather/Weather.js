@@ -6,7 +6,9 @@ import { faSun, faCloud, faUmbrella } from '@fortawesome/free-solid-svg-icons';
 
 import { ButtonDropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
 
-export default class Weather extends React.Component {
+import { connect } from 'react-redux';
+
+class Weather extends React.Component {
   state = {
     dropdownOpen: false
   };
@@ -18,7 +20,7 @@ export default class Weather extends React.Component {
   };
 
   render() {
-    return (
+    return !this.props.showWeather ? null : (
       <ButtonDropdown
         className="corner"
         isOpen={this.state.dropdownOpen}
@@ -115,3 +117,14 @@ export default class Weather extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    showWeather: state.showWeather
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  null
+)(Weather);

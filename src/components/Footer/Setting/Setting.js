@@ -9,7 +9,9 @@ import { faCog } from '@fortawesome/free-solid-svg-icons';
 
 import { ButtonDropdown, DropdownToggle, DropdownMenu } from 'reactstrap';
 
-export default class Setting extends React.Component {
+import { connect } from 'react-redux';
+
+class Setting extends React.Component {
   state = {
     dropdownOpen: false
   };
@@ -55,43 +57,64 @@ export default class Setting extends React.Component {
               <div className="side-content">
                 Links
                 <span className="side-toggle">
-                  <Toggle />
+                  <Toggle
+                    defaultChecked={this.props.showLinks}
+                    onChange={this.props.onUpdatedShowLinks}
+                  />
                 </span>
               </div>
               <div className="side-content">
                 Bookmarks Bar
                 <span className="side-toggle">
-                  <Toggle />
+                  <Toggle
+                    defaultChecked={this.props.showBookmarks}
+                    onChange={this.props.onUpdatedShowBookmarks}
+                  />
                 </span>
               </div>
               <div className="side-content">
                 Search
                 <span className="side-toggle">
-                  <Toggle />
+                  <Toggle
+                    defaultChecked={this.props.showSearch}
+                    onChange={this.props.onUpdatedShowSearch}
+                  />
                 </span>
               </div>
               <div className="side-content">
                 Weather
                 <span className="side-toggle">
-                  <Toggle />
+                  <Toggle
+                    defaultChecked={this.props.showWeather}
+                    onChange={this.props.onUpdatedShowWeather}
+                  />
                 </span>
               </div>
               <div className="side-content">
                 Focus
                 <span className="side-toggle">
-                  <Toggle />
+                  <Toggle
+                    defaultChecked={this.props.showFocus}
+                    onChange={this.props.onUpdatedShowFocus}
+                  />
                 </span>
               </div>
               <div className="side-content">
                 Quote
                 <span className="side-toggle">
-                  <Toggle />
+                  <Toggle
+                    defaultChecked={this.props.showQuote}
+                    onChange={this.props.onUpdatedShowQuote}
+                  />
                 </span>
               </div>
               <div className="side-content">
                 Todo
                 <span className="side-toggle">
-                  <Toggle />
+                  <Toggle
+                    defaultChecked={this.props.showTodo}
+                    onChange={this.props.onUpdatedShowTodo}
+                  />
                 </span>
               </div>
               <div className="side-content large-height">
@@ -159,3 +182,32 @@ export default class Setting extends React.Component {
     );
   }
 }
+
+const mapStateToProps = state => {
+  return {
+    showLinks: state.showLinks,
+    showBookmarks: state.showBookmarks,
+    showSearch: state.showSearch,
+    showWeather: state.showWeather,
+    showFocus: state.showFocus,
+    showQuote: state.showQuote,
+    showTodo: state.showTodo
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return {
+    onUpdatedShowLinks: () => dispatch({ type: 'UPDATE_SHOW_LINKS' }),
+    onUpdatedShowBookmarks: () => dispatch({ type: 'UPDATE_SHOW_BOOKMARKS' }),
+    onUpdatedShowSearch: () => dispatch({ type: 'UPDATE_SHOW_SEARCH' }),
+    onUpdatedShowWeather: () => dispatch({ type: 'UPDATE_SHOW_WEATHER' }),
+    onUpdatedShowFocus: () => dispatch({ type: 'UPDATE_SHOW_FOCUS' }),
+    onUpdatedShowQuote: () => dispatch({ type: 'UPDATE_SHOW_QUOTE' }),
+    onUpdatedShowTodo: () => dispatch({ type: 'UPDATE_SHOW_TODO' })
+  };
+};
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Setting);

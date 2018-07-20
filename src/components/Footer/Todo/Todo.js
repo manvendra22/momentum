@@ -26,7 +26,7 @@ class Todo extends React.Component {
   };
 
   render() {
-    return (
+    return !this.props.showTodo ? null : (
       <ButtonDropdown
         className="corner"
         direction="up"
@@ -95,7 +95,8 @@ class Todo extends React.Component {
 const mapStateToProps = state => {
   return {
     todoList: state.todoList,
-    insertFlag: state.insertFlag
+    insertFlag: state.insertFlag,
+    showTodo: state.showTodo
   };
 };
 
