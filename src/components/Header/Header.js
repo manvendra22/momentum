@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from './Link/Link';
 import Weather from './Weather/Weather';
-import Navbar from './Navbar';
+import BookmarksBar from './BookmarksBar';
 import './Header.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -11,7 +11,7 @@ import { connect } from 'react-redux';
 
 const Header = props => (
   <div className="header">
-    {!props.showBookmarks ? null : <Navbar />}
+    {!props.showBookmarks ? null : <BookmarksBar />}
     <Link />
     {!props.showSearch ? null : (
       <FontAwesomeIcon
