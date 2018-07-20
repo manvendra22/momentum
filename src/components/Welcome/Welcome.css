@@ -41,3 +41,9 @@
   font-size: 4rem;
   color: white;
 }
+
+.skip button {
+  padding: 0.5rem 2.5rem;
+  margin: 1.5rem;
+  border-radius: 5rem;
+}
