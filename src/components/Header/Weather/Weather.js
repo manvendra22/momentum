@@ -35,7 +35,7 @@ class Weather extends React.Component {
           <span>AHMEDABAD</span>
         </DropdownToggle>
 
-        <DropdownMenu className="weather-menu">
+        <DropdownMenu right="false" className="weather-menu">
           <div>
             <div className="weather-header">
               <div className="city">Ahmedabad</div>

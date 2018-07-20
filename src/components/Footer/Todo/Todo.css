@@ -1,10 +1,12 @@
 .todo-menu {
-  margin-right: 18rem;
   width: 22rem;
+  max-width: 22rem;
+  max-height: 25rem;
   padding: 1rem;
   text-align: left;
   color: white;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
+  overflow: auto;
 }
 
 .todo-header {
@@ -17,7 +19,7 @@
 
 .todo-main .icon {
   position: absolute;
-  right: 2rem;
+  right: 1.5rem;
 }
 
 .no-todo {
@@ -26,7 +28,9 @@
 }
 
 .no-todo button {
-  margin-top: 1rem;
+  padding: 0.5rem 2rem;
+  margin: 1rem 0rem;
+  border-radius: 5rem;
 }
 
 .todo-footer {
@@ -37,6 +41,7 @@
   border: none;
   width: 100%;
   height: 2rem;
+  margin: 1rem 0rem;
   background: transparent;
   cursor: text;
   outline: 0;

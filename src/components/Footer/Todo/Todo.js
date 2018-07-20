@@ -34,7 +34,7 @@ class Todo extends React.Component {
         toggle={this.toggle}
       >
         <DropdownToggle className="toggle">Todo</DropdownToggle>
-        <DropdownMenu className="todo-menu">
+        <DropdownMenu right="false" className="todo-menu">
           <DropdownItem header className="todo-header">
             {this.props.todoList.length} TO DO
           </DropdownItem>

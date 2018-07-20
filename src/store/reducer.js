@@ -1,6 +1,6 @@
 const initialState = {
   todoList: [],
-  name: 'Magar Sakhija',
+  name: 'Manav',
   email: '',
   password: '',
   stage: 1,
