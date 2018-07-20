@@ -485,15 +485,31 @@ class Setting extends React.Component {
                   <div className="side-content">
                     <div className="main-heading">Help</div>
                   </div>
-                  <div className="side-content heading tip">TIPS</div>
                   <div className="side-content tip">
+                    <div>TIPS</div>
                     <div className="small-heading">
                       To change your name, toggle the clock between 12 and 24
                       hour, or change your location, double click on the setting
                       you want to change.
                     </div>
-                  </div>
-                  <div className="side-content">
+                    <br />
+                    <table>
+                      <tr>
+                        <td>Todo</td> <td>Links</td>
+                      </tr>
+                      <tr>
+                        <td>Focus</td> <td>Search</td>
+                      </tr>
+                      <tr>
+                        <td>Bookmarks bar</td> <td>Chrome Tab</td>
+                      </tr>
+                      <tr>
+                        <td>Settings</td> <td>Weather</td>
+                      </tr>
+                      <tr>
+                        <td>Cancel, close</td> <td>Hold to admire photo</td>
+                      </tr>
+                    </table>
                     <div className="small-heading">
                       Press TAB to focus Momentum when opening a new tabo be
                       able to use hotkeys. You may need to press tab more than
@@ -501,6 +517,7 @@ class Setting extends React.Component {
                       <div>-Alan Cohen</div>
                     </div>
                   </div>
+                  <div>NEED MORE HELP?</div>
                   <Button color="secondary" size="lg">
                     Check out our Help Center
                   </Button>
@@ -517,7 +534,7 @@ class Setting extends React.Component {
                 </div>
               ) : null}
               {this.state.settingLevel === 9 ? (
-                <div>
+                <div className="about">
                   <FontAwesomeIcon className="icon" icon={faMonero} />
                   <div className="main-heading">Momentum</div>
                   <div className="small-heading">

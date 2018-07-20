@@ -88,6 +88,19 @@
 }
 
 .setting-main .icon {
-  margin: 5rem 12rem;
+  margin: 3rem;
   font-size: 7rem;
+}
+
+table {
+  margin: 1rem 0rem;
+}
+
+td {
+  width: 20rem;
+  padding: 0.2rem;
+}
+
+.about {
+  text-align: center;
 }
