@@ -10,7 +10,7 @@ const Welcome = props => (
   <div className="welcome">
     <FontAwesomeIcon className="icon" icon={faMonero} />
     {props.stage === 1 ? (
-      <div className="section">
+      <div className="wel-section">
         <div className="greeting">Hello, what's your name?</div>
         <input
           type="text"
@@ -26,7 +26,7 @@ const Welcome = props => (
     ) : null}
 
     {props.stage === 2 ? (
-      <div className="section">
+      <div className="wel-section">
         <div className="greeting">What is your Email address?</div>
         <input
           type="text"
@@ -55,7 +55,7 @@ const Welcome = props => (
     ) : null}
 
     {props.stage === 3 ? (
-      <div className="section">
+      <div className="wel-section">
         <div className="greeting">Please enter a password.</div>
         <input
           type="password"

@@ -1,4 +1,5 @@
 .section {
+  height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -6,14 +7,7 @@
   text-align: center;
 }
 
-.quote {
-  text-align: center;
-  width: 500px;
-  font-size: 1.2rem;
-  margin: 1.2rem;
-}
-
-.focus {
+.input-focus {
   border: none;
   border-bottom: 1px solid white;
   width: 35rem;
@@ -28,23 +22,17 @@
   color: white;
 }
 
-.focus3 {
+.input-name {
   border: none;
   border-bottom: 1px solid white;
-  /* width: 35rem; */
-  height: 4rem;
   background: transparent;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
   cursor: text;
   outline: 0;
   text-align: center;
-  font-size: 2rem;
   color: white;
 }
 
 .time {
-  margin-top: 12rem;
   font-size: 12rem;
   font-weight: 600;
   margin-bottom: -2.5rem;

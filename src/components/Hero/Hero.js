@@ -8,14 +8,15 @@ import { connect } from 'react-redux';
 
 class Hero extends Component {
   state = {
-    name: this.props.name
+    name: this.props.name,
+    name_value: this.props.name
   };
 
   componentDidMount() {
     setInterval(() => this.props.onUpdateTime(), 1000);
   }
 
-  calcTime() {
+  calcTime = () => {
     let hours = this.props.timeHours.toString();
     let minutes = this.props.timeMinutes.toString();
     let time = `${hours}:${minutes}`;
@@ -28,15 +29,20 @@ class Hero extends Component {
       time = `${hours}:0${minutes}`;
     }
     return time;
-  }
+  };
 
   updateName = () => {
     this.setState({
       name: (
         <input
           type="text"
-          className="focus3"
-          value={this.props.name}
+          className="input-name"
+          value={this.state.name_value}
+          onChange={e => {
+            this.setState({
+              name_value: e.target.value
+            });
+          }}
           onKeyPress={e => {
             if (e.key === 'Enter') {
               this.props.onFocusAdded(e.target.value);
@@ -73,7 +79,7 @@ class Hero extends Component {
             <div className="question">What is your main focus for today?</div>
             <input
               type="text"
-              className="focus"
+              className="input-focus"
               onKeyPress={e => {
                 if (e.key === 'Enter') {
                   this.props.onFocusAdded(e.target.value);
