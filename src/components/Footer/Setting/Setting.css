@@ -47,8 +47,10 @@
   color: white;
 }
 
-.large-height {
-  height: 4rem;
+.setting-menu button {
+  padding: 0.5rem 2.5rem;
+  margin: 1.5rem;
+  border-radius: 5rem;
 }
 
 .small-heading {
@@ -73,4 +75,9 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   border-bottom: 0px;
+}
+
+.inline {
+  display: flex;
+  justify-content: space-evenly;
 }
